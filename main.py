@@ -1,10 +1,11 @@
 from flask import Flask, request, jsonify
 import requests
 import json
+import os
 
 app = Flask(__name__)
 
-API_KEY = "vn-96862437e7034ebeb1082c45e0181caf"
+API_KEY = os.getenv("VANNA_API_KEY")
 USER_EMAIL = "adi@vanna.ai"
 
 USAGE_SYSTEM_PROMPT = (
